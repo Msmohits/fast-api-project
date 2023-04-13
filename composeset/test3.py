@@ -8,31 +8,10 @@ from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 import webbrowser
 import uvicorn
 import urllib
-
-# from playwright.async_api import Page, expect
-# from pages.base.LocatorGroup import LocatorGroup
-# from pages.base.by import By
-# from Config import config
 from urllib.parse import urlparse, parse_qs
-
-# class AuthRedirectUrl(LocatorGroup):
-#     def __init__(self, page: Page):
-#         self.page = page
-#         self.authenicate_message = self.locate_by(By.XPATH, "//div//*[text()='Your call is authenticated']")
-
-
-#     def is_on_redirect_url_page(self):
-#         self.authenicate_message(self.page).wait_for(timeout=config.expect_timeout)
-#         expect(self.authenicate_message(self.page)).to_be_visible(timeout=config.expect_timeout)
-
-#     def get_code_from_redirecturl(self):
-#         self.is_on_redirect_url_page()
-#         url = self.page.url.split("?")
-#         return url[len(url) - 1]
 
 
 app = FastAPI()
-
 
 
 @app.get('/')
